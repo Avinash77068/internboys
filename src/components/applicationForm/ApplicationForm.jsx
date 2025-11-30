@@ -1,73 +1,18 @@
 import { useState } from "react";
 import { Send, CheckCircle } from "lucide-react";
 import { Helmet } from "react-helmet-async";
+import TextAreaField from "../../customComponent/TextAreaField";
+import InputField from "../../customComponent/InputField";
+import SelectField from "../../customComponent/SelectField";
 
 
-const InputField = ({
-  label,
-  name,
-  type = "text",
-  value,
-  onChange,
-  placeholder,
-  required = false,
-}) => (
-  <div>
-    <label className="block text-sm font-semibold text-slate-700 mb-2">
-      {label} {required && "*"}
-    </label>
-    <input
-      type={type}
-      name={name}
-      required={required}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 outline-none bg-white"
-    />
-  </div>
-);
+
 
 // ✅ Reusable Select Component
-const SelectField = ({ label, name, options, value, onChange, required }) => (
-  <div>
-    <label className="block text-sm font-semibold text-slate-700 mb-2">
-      {label} {required && "*"}
-    </label>
-    <select
-      name={name}
-      required={required}
-      value={value}
-      onChange={onChange}
-      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 bg-white"
-    >
-      <option value="">Select {label}</option>
-      {options.map((opt) => (
-        <option key={opt} value={opt}>
-          {opt}
-        </option>
-      ))}
-    </select>
-  </div>
-);
+
 
 // ✅ Reusable TextArea Component
-const TextAreaField = ({ label, name, value, onChange, required, placeholder }) => (
-  <div>
-    <label className="block text-sm font-semibold text-slate-700 mb-2">
-      {label} {required && "*"}
-    </label>
-    <textarea
-      name={name}
-      rows={3}
-      required={required}
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      className="w-full px-4 py-3 rounded-lg border border-slate-300 focus:ring-2 focus:ring-blue-500/20 bg-white resize-none"
-    />
-  </div>
-);
+
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
