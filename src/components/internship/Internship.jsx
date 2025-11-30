@@ -8,6 +8,7 @@ import {
   FaDatabase,
 } from "react-icons/fa";
 import { BsFillGearFill, BsGraphUp } from "react-icons/bs";
+import { Link } from "react-router-dom";
 
 const Internship = () => {
   const internships = [
@@ -94,9 +95,11 @@ const Internship = () => {
                   {internship.title}
                 </h3>
                 <p className="text-gray-600">{internship.description}</p>
+                <Link to={"/apply"}>
                 <button className="mt-4 px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
                   Apply Now
                 </button>
+                </Link>
               </div>
             </div>
           ))}
