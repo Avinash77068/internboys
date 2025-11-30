@@ -32,10 +32,10 @@ export default function FAQSection() {
   const [tab, setTab] = useState("students");
   const [search, setSearch] = useState("");
 
-  const toggle = (i:any) => setActive(active === i ? null : i);
+  const toggle = (i) => setActive(active === i ? null : i);
 
   // Filter FAQs by search query
-  const filteredFaqs = faqs[tab].filter((f:any) =>
+  const filteredFaqs = faqs[tab].filter((f) =>
     f.q.toLowerCase().includes(search.toLowerCase())
   );
 

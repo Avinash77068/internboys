@@ -1,11 +1,7 @@
 import gradients from "../data/color";
 import features from "../data/Features";
 
-
-
-
-
-export default function Features() {
+export default function Feature() {
   return (
     <section id="features" className="py-20 sm:py-28 ">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

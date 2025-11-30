@@ -1,8 +1,8 @@
+// src/components/data/navLinks.js
 export const navLinks = [
-    "home",
-    "internships",
-    "features",
-    // "about",
-    "contact",
-    "how-it-works",
+    { id: 'home', path: '/', label: 'Home', isNewPage: false },
+    { id: 'internships', path: 'internships', label: 'Internships', isNewPage: false },
+    { id: 'features', path: 'features', label: 'Features', isNewPage: false },
+    { id: 'about', path: '/about', label: 'About', isNewPage: true },
+    { id: 'contact', path: '/contact', label: 'Contact', isNewPage: true }
 ];

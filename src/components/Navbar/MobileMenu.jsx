@@ -1,37 +1,43 @@
-import React from "react";
+// src/components/Navbar/MobileMenu.jsx
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { navLinks } from "../data/navLinks";
 
 export default function MobileMenu({ isOpen, setIsOpen }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (e, link) => {
+    e.preventDefault();
+    setIsOpen(false);
+
+    if (link.isNewPage) {
+      navigate(link.path);
+    } else {
+      if (location.pathname !== "/") {
+        navigate(`/${link.path}`);
+      } else {
+        const element = document.getElementById(link.id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    }
+  };
+
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden sm:mt-2 space-y-4 px-4 bg-black pb-4 h-[100vh]">
+    <div className="md:hidden mt-2 space-y-4 px-4 bg-black pb-4 h-[100vh]">
       {navLinks.map((link) => (
-        <a
-          key={link}
-          href={`#${link}`}
+        <Link
+          key={link.id}
+          to={link.isNewPage ? link.path : `/${link.path}`}
+          onClick={(e) => handleNavigation(e, link)}
           className="block font-medium text-white hover:text-blue-400"
-          onClick={() => setIsOpen(false)}
         >
-          {link.charAt(0).toUpperCase() + link.slice(1)}
-        </a>
+          {link.label}
+        </Link>
       ))}
-
-      <a
-        href="#application"
-        className="block text-center px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/30"
-        onClick={() => setIsOpen(false)}
-      >
-        Apply Now
-      </a>
-
-      <a
-        href="#features"
-        className="block text-center px-4 py-2 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-all duration-200 border border-white/20 backdrop-blur-sm"
-        onClick={() => setIsOpen(false)}
-      >
-        Learn More
-      </a>
     </div>
   );
 }

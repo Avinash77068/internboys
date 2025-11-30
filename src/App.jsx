@@ -1,8 +1,24 @@
-import React from 'react'
-import AllFile from './components/AllFile'
+// src/App.jsx
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import Home from "./components/Home";
+import Contact from "./page/Contact/Contact";
+import About from "./page/about/About";
 
-export default function App() {
+function App() {
   return (
-    <div><AllFile/></div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="contact" element={<Contact />} />
+          <Route path="about" element={<About />} />
+          {/* Add catch-all route for section links */}
+          <Route path=":section" element={<Home />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
+  );
 }
+
+export default App;
