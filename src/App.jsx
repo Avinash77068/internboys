@@ -6,6 +6,7 @@ import Contact from "./page/Contact/Contact";
 import About from "./page/about/About";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Routes>
