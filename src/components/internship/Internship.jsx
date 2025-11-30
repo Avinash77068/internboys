@@ -24,43 +24,43 @@ const Internship = () => {
       title: "Backend Development",
       icon: <FaServer className="text-4xl mb-4 text-green-600" />,
       description:
-        "Master backend technologies including Node.js, Express, and databases like MongoDB and PostgreSQL.",
+        "Master backend technologies including Node.js, Express, and databases like MongoDB and MySQL.",
     },
     {
       id: 3,
       title: "Mobile Development",
       icon: <FaMobileAlt className="text-4xl mb-4 text-purple-600" />,
       description:
-        "Build cross-platform mobile applications using React Native and Flutter.",
+        "Build cross-platform mobile applications using React Native ",
     },
     {
       id: 4,
-      title: "AI/ML",
+      title: "Git",
       icon: <FaRobot className="text-4xl mb-4 text-red-600" />,
       description:
-        "Dive into Artificial Intelligence and Machine Learning with Python and TensorFlow.",
+        "Learn version control using Git and GitHub.",
     },
-    {
-      id: 5,
-      title: "Cloud Computing",
-      icon: <FaCloud className="text-4xl mb-4 text-yellow-500" />,
-      description:
-        "Learn cloud platforms like AWS, Azure, and Google Cloud Platform.",
-    },
-    {
-      id: 6,
-      title: "DevOps",
-      icon: <BsFillGearFill className="text-4xl mb-4 text-gray-600" />,
-      description:
-        "Master CI/CD, Docker, Kubernetes, and other DevOps tools and practices.",
-    },
-    {
-      id: 7,
-      title: "Data Science",
-      icon: <BsGraphUp className="text-4xl mb-4 text-pink-600" />,
-      description:
-        "Learn data analysis, visualization, and machine learning with Python and R.",
-    },
+    // {
+    //   id: 5,
+    //   title: "Cloud Computing",
+    //   icon: <FaCloud className="text-4xl mb-4 text-yellow-500" />,
+    //   description:
+    //     "Learn cloud platforms like AWS, Azure, and Google Cloud Platform.",
+    // },
+    // {
+    //   id: 6,
+    //   title: "DevOps",
+    //   icon: <BsFillGearFill className="text-4xl mb-4 text-gray-600" />,
+    //   description:
+    //     "Master CI/CD, Docker, Kubernetes, and other DevOps tools and practices.",
+    // },
+    // {
+    //   id: 7,
+    //   title: "Data Science",
+    //   icon: <BsGraphUp className="text-4xl mb-4 text-pink-600" />,
+    //   description:
+    //     "Learn data analysis, visualization, and machine learning with Python and R.",
+    // },
     {
       id: 8,
       title: "Database Management",
