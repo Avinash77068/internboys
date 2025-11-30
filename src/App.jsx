@@ -6,11 +6,13 @@ import ApplicationForm from "./components/ApplicationForm";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import FAQSection from "./components/Faq";
+import Internship from "./components/Internship";
 function App() {
   return (
     <div className="min-h-screen bg-white overflow-hidden">
       <Navbar />
       <Hero />
+      <Internship />
       <Features />
       <Benefits />
       <HowItWorks />
