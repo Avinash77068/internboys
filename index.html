@@ -56,6 +56,25 @@
       }
     }
     </script>
+    <script>
+  // If the browser tries to load a path that doesn't actually exist as a file,
+  // redirect it back to index.html so React Router can handle it.
+  (function () {
+    const validRoutes = [
+      "/", 
+      "/about",
+      "/contact",
+      "/internships",
+      "/apply",
+      "/blog"
+    ];
+
+    if (!validRoutes.includes(window.location.pathname)) {
+      window.history.replaceState({}, "", "/");
+    }
+  })();
+</script>
+
   </head>
   <body>
     <div id="root"></div>
