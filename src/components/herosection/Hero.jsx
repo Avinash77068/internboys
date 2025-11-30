@@ -1,7 +1,25 @@
 import { ArrowRight, Briefcase } from "lucide-react";
 import heroiamge from "../../assets/hero.webp";
+import { useState } from "react";
+import submitForm from "../../AiComponent&Fucntion/emailSendingFunction";
 
 export default function Hero() {
+  const [email, setEmail] = useState("");
+
+    const handleSubmit = async (e) => {
+      e.preventDefault();
+      
+      await new Promise((res) => setTimeout(res, 1500));
+      const result = await submitForm(email);
+
+      if (result.success) {
+        console.log(result.message); // Success message
+      } else {
+        console.log(result.message); // Error message
+      }
+      
+    };
+
   return (
     <section
       id="home"
@@ -50,12 +68,14 @@ export default function Hero() {
               <input
                 type="email"
                 placeholder="Enter your email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 className="px-4 py-2 sm:py-4 rounded-lg bg-white w-full flex-1 focus:outline-none text-slate-900 placeholder-slate-400 shadow-lg shadow-blue-500/30"
               />
 
               {/* Submit Button */}
               <button
-                onClick={() => console.log("Email submitted")}
+                onClick={handleSubmit}
                 className="group inline-flex items-center justify-center gap-2 px-8 py-2 sm:py-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-all duration-200 shadow-lg shadow-blue-500/30 hover:shadow-xl hover:shadow-blue-500/40 hover:scale-105"
               >
                 Submit
