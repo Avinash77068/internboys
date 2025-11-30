@@ -27,7 +27,7 @@ export default function MobileMenu({ isOpen, setIsOpen }) {
   if (!isOpen) return null;
 
   return (
-    <div className="md:hidden mt-2 space-y-4 px-4 bg-black pb-4 h-[100vh]">
+    <div className="md:hidden  space-y-4 px-4 bg-black pb-4 h-[100vh]">
       {navLinks.map((link) => (
         <Link
           key={link.id}

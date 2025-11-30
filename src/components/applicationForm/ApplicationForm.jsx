@@ -5,15 +5,6 @@ import TextAreaField from "../../customComponent/TextAreaField";
 import InputField from "../../customComponent/InputField";
 import SelectField from "../../customComponent/SelectField";
 
-
-
-
-// ✅ Reusable Select Component
-
-
-// ✅ Reusable TextArea Component
-
-
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
     fullName: "",
