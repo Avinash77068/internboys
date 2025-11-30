@@ -1,31 +1,5 @@
-import { FileText, UserCheck, Rocket, GraduationCap } from 'lucide-react';
+import steps from "../data/HowItWorks";
 
-const steps = [
-  {
-    icon: FileText,
-    title: 'Submit Application',
-    description: 'Fill out our simple application form with your details, area of interest, and what you hope to learn.',
-    step: '01'
-  },
-  {
-    icon: UserCheck,
-    title: 'Review Process',
-    description: 'Our team reviews applications carefully. We\'ll reach out to discuss your goals and answer questions.',
-    step: '02'
-  },
-  {
-    icon: Rocket,
-    title: 'Start Your Journey',
-    description: 'Get onboarded, meet your mentor, and dive into real projects. Begin building valuable experience.',
-    step: '03'
-  },
-  {
-    icon: GraduationCap,
-    title: 'Complete & Certify',
-    description: 'Finish your projects, showcase your work, and receive your official completion certificate.',
-    step: '04'
-  }
-];
 
 export default function HowItWorks() {
   return (
@@ -36,7 +10,8 @@ export default function HowItWorks() {
             How It Works
           </h2>
           <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-            A simple, straightforward process to get you started on your internship journey
+            A simple, straightforward process to get you started on your
+            internship journey
           </p>
         </div>
 

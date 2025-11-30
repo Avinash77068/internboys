@@ -113,7 +113,8 @@ export default function ApplicationForm() {
               Application Submitted Successfully!
             </h3>
             <p className="text-slate-600 mb-6">
-              Thank you for applying! You’ll hear from us within 5–7 business days.
+              Thank you for applying! You’ll hear from us within 5–7 business
+              days.
             </p>
             <button
               onClick={() => {
@@ -153,9 +154,12 @@ export default function ApplicationForm() {
       <section className="py-20 bg-white">
         <div className="max-w-4xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-slate-900 mb-3">Apply Now</h2>
+            <h2 className="text-4xl font-bold text-slate-900 mb-3">
+              Apply Now
+            </h2>
             <p className="text-slate-600">
-              Fill out the form below and take the first step toward your career.
+              Fill out the form below and take the first step toward your
+              career.
             </p>
           </div>
 
@@ -210,7 +214,13 @@ export default function ApplicationForm() {
                   value={formData.year}
                   onChange={handleChange}
                   required
-                  options={["1st Year", "2nd Year", "3rd Year", "4th Year", "Graduate"]}
+                  options={[
+                    "1st Year",
+                    "2nd Year",
+                    "3rd Year",
+                    "4th Year",
+                    "Graduate",
+                  ]}
                 />
                 <SelectField
                   label="Area of Interest"

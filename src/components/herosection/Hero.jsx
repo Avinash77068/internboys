@@ -1,15 +1,12 @@
 import { ArrowRight, Briefcase } from "lucide-react";
-import heroiamge from "../assets/hero.webp";
+import heroiamge from "../../assets/hero.webp";
 
 export default function Hero() {
-  const scrollToApplication = () => {
-    document
-      .getElementById("application")
-      ?.scrollIntoView({ behavior: "smooth" });
-  };
-
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900">
+    <section
+      id="home"
+      className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900"
+    >
       {/* Background Image */}
       <div
         className="absolute inset-0 bg-cover bg-center"
@@ -68,7 +65,8 @@ export default function Hero() {
 
             {/* Guarantee Text */}
             <p className="my-3 text-sm text-slate-300 sm:text-left text-center">
-              ✅ We guarantee a reply to your email within <span className="font-semibold text-white">48 hours</span>.
+              ✅ We guarantee a reply to your email within{" "}
+              <span className="font-semibold text-white">48 hours</span>.
             </p>
           </div>
 
