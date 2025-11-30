@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import logo from "../assets/logo.svg";
+import logo from "../../assets/logo.svg";
 import { Helmet } from "react-helmet-async";
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -43,21 +43,26 @@ export default function Navbar() {
 
             {/* Desktop Navigation */}
             <div className="hidden md:flex items-center space-x-8">
-              {["home", "internships", "features", "about", "contact"].map(
-                (link) => (
-                  <a
-                    key={link}
-                    href={`#${link}`}
-                    className={`font-medium transition-colors ${
-                      scrolled
-                        ? "text-white hover:text-blue-400"
-                        : "text-white hover:text-blue-400"
-                    }`}
-                  >
-                    {link.charAt(0).toUpperCase() + link.slice(1)}
-                  </a>
-                )
-              )}
+              {[
+                "home",
+                "internships",
+                "features",
+                "about",
+                "contact",
+                "how-it-works",
+              ].map((link) => (
+                <a
+                  key={link}
+                  href={`#${link}`}
+                  className={`font-medium transition-colors ${
+                    scrolled
+                      ? "text-white hover:text-blue-400"
+                      : "text-white hover:text-blue-400"
+                  }`}
+                >
+                  {link.charAt(0).toUpperCase() + link.slice(1)}
+                </a>
+              ))}
 
               {/* Apply & Learn More Buttons */}
               <div className="flex gap-4">

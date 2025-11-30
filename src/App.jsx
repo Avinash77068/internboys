@@ -3,8 +3,8 @@ import Features from "./components/Feature";
 import Benefits from "./components/Benefits";
 import HowItWorks from "./components/HowItsWorks";
 import ApplicationForm from "./components/ApplicationForm";
-import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+import Footer from "./components/footer/Footer";
+import Navbar from "./components/Navbar/Navbar";
 import FAQSection from "./components/Faq";
 import Internship from "./components/Internship";
 function App() {
