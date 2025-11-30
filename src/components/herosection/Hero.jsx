@@ -6,19 +6,34 @@ import submitForm from "../../AiComponent&Fucntion/emailSendingFunction";
 export default function Hero() {
   const [email, setEmail] = useState("");
 
-    const handleSubmit = async (e) => {
-      e.preventDefault();
-      
-      await new Promise((res) => setTimeout(res, 1500));
-      const result = await submitForm(email);
+  const handleSubmit = async (e) => {
+    e.preventDefault();
 
-      if (result.success) {
-        console.log(result.message); // Success message
+    if (!email) {
+      alert("Please enter your email");
+      return;
+    }
+
+    try {
+      await new Promise((res) => setTimeout(res, 1500));
+      const response = await submitForm({
+        email: email,
+        name: "Website Visitor",
+        message: "New subscription from website hero section",
+      });
+
+      if (response.success) {
+        alert("Thank you for subscribing! We'll be in touch soon.");
       } else {
-        console.log(result.message); // Error message
+        alert(response.message || "Failed to submit. Please try again.");
       }
-      
-    };
+
+      setEmail("");
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      alert("An error occurred. Please try again later.");
+    }
+  };
 
   return (
     <section
