@@ -4,6 +4,7 @@ import { Helmet } from "react-helmet-async";
 import TextAreaField from "../../customComponent/TextAreaField";
 import InputField from "../../customComponent/InputField";
 import SelectField from "../../customComponent/SelectField";
+import submitForm from "../../AiComponent&Fucntion/emailSendingFunction";
 
 export default function ApplicationForm() {
   const [formData, setFormData] = useState({
@@ -32,7 +33,13 @@ export default function ApplicationForm() {
     e.preventDefault();
     setIsSubmitting(true);
     await new Promise((res) => setTimeout(res, 1500));
-    console.log("Form submitted:", formData);
+    const result = await submitForm(formData);
+  
+  if (result.success) {
+      console.log(result.message); // Success message
+  } else {
+      console.log(result.message); // Error message
+  }
     setIsSubmitting(false);
     setIsSubmitted(true);
   };
@@ -196,7 +203,7 @@ export default function ApplicationForm() {
               </div>
 
               {/* Resume Upload */}
-              <div className="mb-8">
+              {/* <div className="mb-8">
                 <label className="block text-sm font-semibold text-slate-700 mb-2">
                   Upload Resume (PDF/DOC) *
                 </label>
@@ -217,7 +224,7 @@ export default function ApplicationForm() {
                     ✅ {formData.resume.name} selected
                   </p>
                 )}
-              </div>
+              </div> */}
 
               <button
                 type="submit"
