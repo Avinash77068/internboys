@@ -5,6 +5,7 @@ import Home from "./components/Home";
 import Contact from "./page/Contact/Contact";
 import About from "./page/about/About";
 import ApplicationForm from "./components/applicationForm/ApplicationForm";
+import GitRoadmap from "./page/github/GitRoadmap";
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/about" element={<About />} />
           <Route path="/apply" element={<ApplicationForm />} />
           <Route path=":section" element={<Home />} />
+          <Route path="/github" element={<GitRoadmap />} />
         </Route>
       </Routes>
     </BrowserRouter>

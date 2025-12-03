@@ -5,4 +5,5 @@ export const navLinks = [
     { id: 'features', path: 'features', label: 'Features', isNewPage: false },
     { id: 'about', path: '/about', label: 'About', isNewPage: true },
     { id: 'contact', path: '/contact', label: 'Contact', isNewPage: true }
+
 ];
