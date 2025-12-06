@@ -1,7 +1,6 @@
 import { ArrowRight, Briefcase } from "lucide-react";
 import heroiamge from "../../assets/hero.webp";
 import { useState } from "react";
-import submitForm from "../../AiComponent&Fucntion/emailSendingFunction";
 import { visitor } from "../../services/apiCall";
 
 export default function Hero() {
