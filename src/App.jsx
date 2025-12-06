@@ -19,6 +19,7 @@ function App() {
           <Route path="/apply" element={<ApplicationForm />} />
           <Route path=":section" element={<Home />} />
           <Route path="/github" element={<GitRoadmap />} />
+          
         </Route>
       </Routes>
     </BrowserRouter>

@@ -8,6 +8,7 @@ import Benefits from "./benefit/Benefits";
 import HowItWorks from "./howitworks/HowItsWorks";
 import ApplicationForm from "./applicationForm/ApplicationForm";
 import FAQSection from "./faq/Faq";
+import TopicsReaderUI from "../page/TopicsReaderUI/TopicsReaderUI";
 
 export default function Home() {
   const { section } = useParams();
@@ -25,6 +26,7 @@ export default function Home() {
     <>
       <Hero />
       <Internship />
+      <TopicsReaderUI/>
       <Feature />
       <Benefits />
       <HowItWorks />
