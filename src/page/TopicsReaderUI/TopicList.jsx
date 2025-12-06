@@ -10,9 +10,7 @@ export default function TopicList({
     <main className="flex flex-col w-full p-6">
       <h2 className="text-2xl font-bold mb-4">{selectedTopic}</h2>
 
-      <p className="text-gray-400 mb-4 text-sm">Choose lesson:</p>
-
-      <div className="space-y-3 max-h-[50vh] overflow-y-auto">
+      <div className="space-y-3 scrollbar-hidden scrollbar-hide max-w-[40vw] max-h-[50vh] overflow-y-auto pr-2">
         {lessons.map((sub, i) => {
           const isSelected = selectedLesson?.name === sub.name;
 

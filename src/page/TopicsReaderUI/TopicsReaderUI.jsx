@@ -23,6 +23,7 @@ export default function TopicsApp() {
 
       <TopicList
         selectedTopic={selectedTopic}
+        selectedLesson={selectedSubTopic}
         lessons={DATA[selectedTopic]}
         onLessonSelect={(sub) => setSelectedSubTopic(sub)}
       />

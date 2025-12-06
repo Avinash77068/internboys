@@ -2,7 +2,7 @@ import { Search } from "lucide-react";
 
 export default function Sidebar({ topics, selectedTopic, onTopicSelect }) {
   return (
-    <aside className="w-full border-r border-[#1a1f2e] p-4 hidden md:block">
+    <aside className="max-w-[20vw] w-full border-r border-[#1a1f2e] p-4 hidden md:block">
       <div className="flex items-center gap-2 bg-[#131722] rounded-md px-3 py-2">
         <Search size={16} />
         <input

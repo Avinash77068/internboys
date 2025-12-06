@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export default function Reader({ subTopic }) {
   const [copied, setCopied] = useState(false);
-
   const copyCode = () => {
     navigator.clipboard.writeText(subTopic.code);
     setCopied(true);
