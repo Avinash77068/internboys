@@ -2,6 +2,7 @@ import { ArrowRight, Briefcase } from "lucide-react";
 import heroiamge from "../../assets/hero.webp";
 import { useState } from "react";
 import submitForm from "../../AiComponent&Fucntion/emailSendingFunction";
+import { visitor } from "../../services/apiCall";
 
 export default function Hero() {
   const [email, setEmail] = useState("");
@@ -16,18 +17,18 @@ export default function Hero() {
 
     try {
       await new Promise((res) => setTimeout(res, 1500));
-      const response = await submitForm({
-        email: email,
-        name: "Website Visitor",
-        message: "New subscription from website hero section",
-      });
+      // const response = await submitForm({
+      //   email: email,
+      //   name: "Website Visitor",
+      //   message: "New subscription from website hero section",
+      // });
 
-      if (response.success) {
-        alert("Thank you for subscribing! We'll be in touch soon.");
-      } else {
-        alert(response.message || "Failed to submit. Please try again.");
-      }
-
+      // if (response.success) {
+      //   alert("Thank you for subscribing! We'll be in touch soon.");
+      // } else {
+      //   alert(response.message || "Failed to submit. Please try again.");
+      // }
+      visitor("/users/visitor", { email });
       setEmail("");
     } catch (error) {
       console.error("Error submitting form:", error);
